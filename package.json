@@ -1,0 +1,55 @@
+{
+  "name": "create-odos",
+  "version": "1.0.0",
+  "description": "一个用于创建项目的脚手架工具",
+  "main": "index.js",
+  "bin": {
+    "create-odos": "index.js",
+    "odos": "index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "prepublishOnly": "npm run build",
+    "release": "npm publish --access public"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "scaffold",
+    "cli",
+    "react",
+    "vue3",
+    "odos",
+    "create-app"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/create-odos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/create-odos/issues"
+  },
+  "homepage": "https://github.com/yourusername/create-odos#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "ejs": "^3.1.9",
+    "fs-extra": "^11.3.0",
+    "inquirer": "^9.2.12",
+    "ora": "^7.0.1"
+  },
+  "devDependencies": {
+    "glob": "^10.4.5"
+  }
+}

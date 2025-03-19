@@ -1,0 +1,26 @@
+.redux-example {
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.redux-example .counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.redux-example button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.redux-example span {
+  font-size: 1.2rem;
+  min-width: 2rem;
+  text-align: center;
+} 

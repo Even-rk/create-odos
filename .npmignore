@@ -1,0 +1,69 @@
+# 开发和构建文件
+scripts/
+.editorconfig
+.eslintrc.json
+.prettierrc
+.github/
+test/
+__tests__/
+*.test.js
+*.spec.js
+jest.config.js
+coverage/
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# 文档和示例（保留README.md）
+docs/
+examples/
+CONTRIBUTING.md
+CHANGELOG.md
+
+# 源代码控制
+.git/
+.gitignore
+.gitattributes
+
+# CI/CD
+.travis.yml
+.gitlab-ci.yml
+.github/
+.circleci/
+
+# 开发工具配置
+.vscode/
+.idea/
+*.iml
+.editorconfig
+.prettierrc
+.eslintrc*
+
+# 临时文件和日志
+*.log
+logs/
+tmp/
+temp/
+.tmp/
+.temp/
+.cache/
+.DS_Store
+
+# 模板中的大型文件和构建产物
+templates/**/node_modules/
+templates/**/.git/
+templates/**/.DS_Store
+templates/**/dist/
+templates/**/.cache/
+templates/**/.vscode/
+templates/**/.idea/
+
+# 其他不需要发布的文件
+.env*
+*.tgz
+.npmrc
+update-templates.js
+
+# 源代码地图文件
+**/*.map 

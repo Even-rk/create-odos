@@ -1,0 +1,40 @@
+/* 全局样式 */
+:root {
+  --primary-color: #1890ff;
+  --secondary-color: #52c41a;
+  --text-color: #333;
+  --bg-color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* 基础布局 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* 主题切换 */
+.dark-theme {
+  --text-color: #f0f0f0;
+  --bg-color: #222;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+} 
