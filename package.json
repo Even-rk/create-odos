@@ -32,12 +32,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/create-odos.git"
+    "url": "git+git@github.com:Even-rk/create-odos.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/create-odos/issues"
+    "url": "https://github.com/Even-rk/create-odos/issues"
   },
-  "homepage": "https://github.com/yourusername/create-odos#readme",
+  "homepage": "https://github.com/Even-rk/create-odos#readme",
   "engines": {
     "node": ">=14.0.0"
   },
