@@ -66,7 +66,7 @@ program
         type: 'list',
         name: 'framework',
         message: '请选择一个框架:',
-        choices: ['react', 'vue3']
+        choices: ['react', 'vue']
       }
     ]);
 
@@ -103,7 +103,7 @@ program
         ]);
         store = storeType;
       }
-    } else if (framework === 'vue3') {
+    } else if (framework === 'vue') {
       const { useStore } = await inquirer.prompt([
         {
           type: 'confirm',
@@ -158,7 +158,7 @@ program
 
     // Vue 特有选项 - jsx 支持
     let useJsx = false;
-    if (framework === 'vue3') {
+    if (framework === 'vue') {
       const { jsx } = await inquirer.prompt([
         {
           type: 'confirm',
