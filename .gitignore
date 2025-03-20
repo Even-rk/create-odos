@@ -8,7 +8,12 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Dependencies
+templates/react/*/node_modules
+templates/react/*/pnpm-lock.yaml
+templates/vue/*/node_modules
+templates/vue/*/pnpm-lock.yaml
 node_modules
+pnpm-lock.yaml
 .pnp
 .pnp.js
 
