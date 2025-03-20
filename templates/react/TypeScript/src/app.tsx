@@ -15,9 +15,6 @@ function App() {
           编辑 <code>src/app.tsx</code> 并保存以测试 HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        点击 ODOS 图标了解更多
-      </p>
     </div>
   );
 }

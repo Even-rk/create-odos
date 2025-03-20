@@ -9,9 +9,6 @@
         编辑 <code>src/app.vue</code> 并保存以测试 HMR
       </p>
     </div>
-    <p class="read-the-docs">
-      点击 ODOS 图标了解更多
-    </p>
   </div>
 </template>
 
@@ -32,9 +29,5 @@ const count = ref(0);
 
 .card {
   padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 </style> 
