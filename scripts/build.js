@@ -58,7 +58,7 @@ async function build() {
     packageJson.files = [
       "index.js",
       "lib",
-      "templates",
+      "templates/**",
       "README.md",
       "LICENSE",
     ];

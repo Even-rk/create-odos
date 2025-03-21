@@ -21,10 +21,19 @@ const getTemplatesDir = () => {
     path.resolve(process.cwd(), "templates"),
     
     // 2. 相对于当前文件的路径 - 开发和生产都适用
-    path.resolve(process.cwd(), "templates"),
+    path.resolve(__dirname, "templates"),
     
-    // 3. 使用 process.env.PACKAGE_ROOT（由webpack设置）
-    path.resolve(process.env.PACKAGE_ROOT || '.', 'templates')
+    // 3. 全局安装环境 - npm全局安装路径
+    path.resolve(__dirname, "../templates"),
+    
+    // 4. 使用 process.env.PACKAGE_ROOT（由webpack设置）
+    path.resolve(process.env.PACKAGE_ROOT || '.', 'templates'),
+    
+    // 5. 相对于当前目录尝试node_modules路径
+    path.resolve(process.cwd(), "node_modules/create-odos/templates"),
+    
+    // 6. 尝试相对于node执行路径查找
+    path.resolve(path.dirname(process.execPath), "../lib/node_modules/create-odos/templates")
   ];
   
   // 查找第一个存在的路径
