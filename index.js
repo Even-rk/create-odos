@@ -9,8 +9,12 @@ import ora from 'ora';
 import { fileURLToPath } from 'url';
 import { createProject } from './lib/create.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// 获取模板目录的函数，确保在打包环境中也能正确工作
+const getTemplatesDir = () => {
+  // 尝试使用process.env.PACKAGE_ROOT（由webpack设置）
+  const root = process.env.PACKAGE_ROOT || '.';
+  return path.resolve(root, 'templates');
+};
 
 // 设置版本号和描述
 program
@@ -194,7 +198,7 @@ program
         usePrettier,
         useJsx,
         useDevTools,
-        templateDir: path.join(__dirname, 'templates'),
+        templateDir: getTemplatesDir(),
         targetDir: projectPath
       });
       
