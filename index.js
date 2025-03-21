@@ -21,7 +21,7 @@ const getTemplatesDir = () => {
     path.resolve(process.cwd(), "templates"),
     
     // 2. 相对于当前文件的路径
-    path.resolve(__dirname, "templates"),
+    path.resolve(path.dirname(fileURLToPath(import.meta.url)), "templates"),
     
     // 3. 使用 process.env.PACKAGE_ROOT（由webpack设置）
     path.resolve(process.env.PACKAGE_ROOT || '.', 'templates')

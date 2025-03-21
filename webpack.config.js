@@ -4,14 +4,13 @@ import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 export default {
   mode: "production",
   entry: "./index.js",
   target: "node",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(path.dirname(__filename), "dist"),
     filename: "index.js",
     libraryTarget: "commonjs2",
   },

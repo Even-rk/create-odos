@@ -8,8 +8,7 @@ import { exec } from "child_process";
 
 const execPromise = promisify(exec);
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const rootDir = path.resolve(__dirname, "..");
+const rootDir = path.resolve(path.dirname(__filename), "..");
 
 // 定义要忽略的文件和目录模式
 const ignoredPatterns = [
