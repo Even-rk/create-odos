@@ -57,7 +57,6 @@ async function build() {
     // 更新package.json的主入口和文件列表
     packageJson.main = "index.js";
     delete packageJson.type;
-    delete packageJson.scripts;
     packageJson.files = [
       "index.js",
       "lib",
