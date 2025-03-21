@@ -7,8 +7,7 @@ const { glob } = pkg;
 import { exec } from "child_process";
 
 const execPromise = promisify(exec);
-const __filename = fileURLToPath(import.meta.url);
-const rootDir = path.resolve(path.dirname(__filename), "..");
+const rootDir = path.resolve(process.cwd());
 
 // 定义要忽略的文件和目录模式
 const ignoredPatterns = [

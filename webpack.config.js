@@ -3,14 +3,12 @@ import { fileURLToPath } from "url";
 import TerserPlugin from "terser-webpack-plugin";
 import webpack from "webpack";
 
-const __filename = fileURLToPath(import.meta.url);
-
 export default {
   mode: "production",
   entry: "./index.js",
   target: "node",
   output: {
-    path: path.resolve(path.dirname(__filename), "dist"),
+    path: path.resolve(process.cwd(), "dist"),
     filename: "index.js",
     libraryTarget: "commonjs2",
   },
@@ -56,6 +54,10 @@ export default {
     // 使用环境变量替代import.meta.url
     new webpack.DefinePlugin({
       "process.env.PACKAGE_ROOT": JSON.stringify("."),
+      "import.meta.url": "undefined",
+      "import.meta": JSON.stringify({
+        url: "file:///placeholder.js"
+      })
     }),
   ],
 };

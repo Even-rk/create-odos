@@ -3,8 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { execSync } from "child_process";
 
-const __filename = fileURLToPath(import.meta.url);
-const rootDir = path.resolve(path.dirname(__filename), "..");
+const rootDir = path.resolve(process.cwd());
 
 async function build() {
   try {
