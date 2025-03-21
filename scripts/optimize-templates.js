@@ -63,11 +63,6 @@ async function compressTemplates() {
         await execPromise(tarCommand);
         
         console.log(`${template}模板压缩完成！`);
-        
-        // 同时复制完整目录结构到dist中
-        const outputDirPath = path.resolve(outputDir, template);
-        await fs.copy(templatePath, outputDirPath, { overwrite: true });
-        console.log(`同时复制了完整的${template}模板目录`);
       } else {
         // 对于文件（如README.md），直接复制
         await fs.copy(templatePath, path.resolve(outputDir, template));
