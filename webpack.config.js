@@ -24,7 +24,7 @@ export default {
             comments: false,
           },
           compress: {
-            drop_console: true,
+            drop_console: false,
           },
         },
         extractComments: false,
@@ -38,6 +38,11 @@ export default {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
+          options: {
+            plugins: [
+              'babel-plugin-transform-import-meta'
+            ]
+          }
         },
       },
     ],

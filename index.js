@@ -9,11 +9,37 @@ import ora from 'ora';
 import { fileURLToPath } from 'url';
 import { createProject } from './lib/create.js';
 
+// 获取当前文件的目录
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // 获取模板目录的函数，确保在打包环境中也能正确工作
 const getTemplatesDir = () => {
-  // 尝试使用process.env.PACKAGE_ROOT（由webpack设置）
-  const root = process.env.PACKAGE_ROOT || '.';
-  return path.resolve(root, 'templates');
+  // 尝试多个可能的路径
+  const possiblePaths = [
+    // 1. 本地开发环境
+    path.resolve(process.cwd(), "templates"),
+    
+    // 2. 相对于当前文件的路径
+    path.resolve(__dirname, "templates"),
+    
+    // 3. 使用 process.env.PACKAGE_ROOT（由webpack设置）
+    path.resolve(process.env.PACKAGE_ROOT || '.', 'templates')
+  ];
+  
+  // 查找第一个存在的路径
+  for (const p of possiblePaths) {
+    try {
+      if (fs.existsSync(p)) {
+        console.log(`找到模板目录: ${p}`);
+        return p;
+      }
+    } catch (e) {
+      // 忽略错误，继续尝试下一个路径
+    }
+  }
+  
+  return path.resolve('.', 'templates');
 };
 
 // 设置版本号和描述
