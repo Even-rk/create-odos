@@ -1,6 +1,6 @@
 {
   "name": "create-odos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个用于创建项目的脚手架工具",
   "main": "index.js",
   "bin": {
@@ -17,8 +17,8 @@
   ],
   "scripts": {
     "build": "node ./scripts/build.js",
-    "prepublishOnly": "pnpm run build",
-    "pub": "cd dist && npm publish"
+    "prepublishOnly": "npm run build",
+    "pub": "cd dist && npm publish --no-scripts"
   },
   "keywords": [
     "scaffold",
