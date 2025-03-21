@@ -1,6 +1,6 @@
 {
   "name": "create-odos",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "一个用于创建项目的脚手架工具",
   "main": "index.js",
   "bin": {
